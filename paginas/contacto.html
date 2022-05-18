@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Muebles</title>
+    <link rel="icon" type="image/jpg" href="../recursos/favicon-16x16.png"/>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header>
+        <img class="header__logo" src="../recursos/logo.png" alt="logo-mueble"/>
+        <h2 class="header__h2 slogan">Tu hogar, tu estilo</h2>
+        <nav class="header__navegacion">
+            <ul>
+                <li><a href="../index.html">Inicio</a> </li>
+                <li><a href="productos.html">Productos</a> </li>
+                <li><a href="galeria.html">Galería</a> </li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a> </li>
+                <li><a href="contacto.html">Contacto</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h1 class="main__title">Contactanos</h1>
+        </div>
+        <div class="formulario">
+            <p>Ingresa tus datos de contacto:</p>
+            <form method="post">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+                </div>
+                <div>
+                    <label for="mail">Correo electrónico:</label>
+                    <input type="email" id="mail" name="mail">
+                </div>
+                <div>
+                    <label for="cel">Teléfono:</label>
+                    <input type="number" id="cel" name="cel">
+                </div>
+                
+                <div>Género:</div>
+                <div>
+                    <input type="radio" id="genero" name="genero" value="masculino" checked>
+                    <label for="genero">Masculino</label>
+                    <input type="radio" id="genero" name="genero" value="femenino">
+                    <label for="genero">Femenino</label>
+                </div>
+
+                <div>Como nos conociste:</div>
+                <div>
+                    <input type="checkbox" id="opcion1" name="opcion1" value="anunciogoogle">
+                    <label for="vehicle1">Anuncio google</label><br>
+                    <input type="checkbox" id="opcion2" name="opcion2" value="anunciofacebook">
+                    <label for="vehicle2">Anuncio facebook</label><br>
+                    <input type="checkbox" id="opcion3" name="opcion3" value="busqueda">
+                    <label for="vehicle3">Busqueda google</label><br>
+                </div>
+
+                <div>Que tipo de mueble te interesa:</div>
+                <div>
+                    <select name="mueble">
+                        <option value="value1" selected>Buró</option>
+                        <option value="value2">Escritorio</option>
+                        <option value="value3">Librero</option>
+                        <option value="value4">Repisa</option>
+                        <option value="value4">Clóset</option>
+                    </select>
+                </div>
+                <p>Comentarios:</p>
+                <textarea name="textarea" rows="10" cols="50">Agrega tus comentarios aquí</textarea>
+                <div>
+                <button type="submit" value="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <h2 class="tarjeta__titulo">Ubicanos</h2>
+            <iframe class="contacto__ubicacion" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15040.87438481237!2d-96.92010534197527!3d19.532226550472075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2e299da6005d%3A0x76f0d87cf48b9900!2sTendencias%20Muebles!5e0!3m2!1ses!2smx!4v1650067168562!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__redes">
+        <img class="footer__imgs" src="../recursos/facebook-logo.png" alt="facebook"/>
+        <img class="footer__imgs" src="../recursos/whatsapp-logo.png" alt="whatsapp"/>
+        </div>
+        <p class="footer__disclaimer">Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
