@@ -7,7 +7,7 @@
 
 html {
     font-size: 16px;
-    background-color: antiquewhite;
+    background-color: #faebd7;
 }
 
 /* Color de fondo de la navbar */
@@ -27,6 +27,7 @@ aside {
     align-items: center;
     background-color: aquamarine;
     padding: 1rem;
+    margin-top: 3.5rem;
 }
 
 /* Espacio bajo titulo de aside de Promociones */
@@ -57,7 +58,6 @@ li a {
     border-radius: 1rem;
     padding: 1.5rem;
     margin: auto;
-    width: 90%;
     padding: 0.5rem;
     background-image: url("../recursos/fondo1.jpg");
     background-size: cover;
@@ -73,10 +73,20 @@ li a {
     text-align: justify;
 }
 
+.card {
+    margin: 1rem auto;
+    height: 20rem;
+}
+
+.card2 {
+    margin: 1rem auto;
+    width: 35rem;
+}
+
 /* Revisar si se modifica o se borra */
 iframe {
-    width: 560px;
-    height: 315px;
+    width: 40rem;
+    height: 30rem;
 }
 
 /* Propiedades de boton__cotizar de página de productos */
@@ -95,6 +105,11 @@ iframe {
 .boton__cotizar:hover {
     transform: scale(1.2);
     color: brown;
+}
+
+.tarjeta__titulo {
+    color: brown;
+    font-family: rubik, sans-serif;
 }
 
 /* Tamaño imagenes: misión, visión y politica */
@@ -121,16 +136,24 @@ iframe {
     background-size: contain;
     background-repeat: no-repeat;
     border: 1px solid chocolate;
-    width: 20rem;
+    width: 18rem;
     height: 16rem;
     margin: auto;
     align-content: center;
     border-radius: 1rem;
 }
 
+textarea {
+    width: 10rem;
+    height: 10rem;
+    resize: none;
+}
+
 /* Color del footer */
 footer {
+    display: block;
     background-color: burlywood;
+    height: 7rem;
 }
 
 /* Propiedades del footer */
@@ -146,7 +169,7 @@ footer {
     display: block;
     justify-content: flex-end;
     width: 3rem;
-    margin: 0px 0.5rem;
+    margin: 0.5rem 0.5rem;
 }
 
 /* Propiedades del disclaimer del footer */
@@ -176,18 +199,87 @@ footer {
     }
 }
 
+div p {
+    text-align: justify;
+}
+
+.nosotros__historia {
+    padding: 1.5rem;
+}
+
+
+
 /*Para visualización en tablet*/
-@media (min-width: 541px) and (max-width: 720px) {
+/* MEDIANO */
+@media (min-width: 768px) and (max-width: 991px) {
+    aside {
+    margin-top: 3rem;
+    }
+
     iframe {
-        width: 390px;
-        height: 280px;
+        width: 30rem;
+        height: 25rem;
+    }
+
+    div .card2 {
+        width: 33rem;
+        align-self: center;
+        margin: 0.5rem auto;
     }
 }
 
 /*Para visualización en celular*/
-@media (min-width: 320px) and (max-width: 540px) {
+@media (min-width: 576px) and (max-width: 767px) {
+    aside {
+        margin: 0.5rem auto;
+        }
+
+    div .card {
+        width: 32rem;
+        height: 20rem;
+        align-self: center;
+        margin: 0.5rem auto;
+    }
+
+    div .card2 {
+        width: 33rem;
+        /* height: 27rem; */
+        align-self: center;
+        margin: 0.5rem auto;
+    }
+
     iframe {
+        width: 32rem;
+        height: 25rem;
+    }
+}
+
+/* Pantalla extra pequeña */
+@media (max-width: 575px) {
+    .main__img {
+        height: 15rem;
+    }
+
+    aside {
+        margin-top: 0.5rem;
+        }
+
+    iframe {
+        width: 95vw;
+        height: 15rem;
+    }
+
+    div .card {
+        margin: 0.5rem 0.5rem;
+        height: 20rem;
+    }
+
+    div .card2 {
+        /* height: 30rem; */
+        margin: 0.5rem auto;
+    }
+
+    .img__productos {
         width: 90vw;
-        height: 40vh;
     }
 }
