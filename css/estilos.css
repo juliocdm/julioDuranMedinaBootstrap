@@ -1,26 +1,20 @@
+/* LETRA DE GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
+/* PROPIEDADES INICIALES DE TODAS LAS PÁGINAS */
 * {
     margin: 0;
     padding: 0;
+    
 }
 
+/* PROPIEDADES PARA EL HTML */
 html {
     font-size: 16px;
     background-color: #faebd7;
 }
 
-/* Color de fondo de la navbar */
-.header__bg {
-    background-color: #deb887;
-}
-
-/* Alinear a la derecha el menú del navbar */
-.navbar-nav {
-    margin-left: auto;
-}
-
-/* Propiedades del aside de Promociones */
+/* PROPIEDADES DEL ASIDE DE PROMOCIÓN */
 aside {
     display: flex;
     flex-direction: column;
@@ -30,33 +24,68 @@ aside {
     margin-top: 3.5rem;
 }
 
-/* Espacio bajo titulo de aside de Promociones */
+/* ESPACIO BAJO TITULO DE ASIDE DE PROMOCIONES */
 aside h3 {
     padding-bottom: 1rem;
 }
 
-/* Justifica el párrafo de aside de Promociones */
+/* JUSTIFICAR EL PÁRRAFO DE ASIDE DE PROMOCIONES */
 aside p {
     text-align: justify;
 }
 
-/* Tamaño de texto de enlaces del navbar */
-li a {
-    font-size: 1.3rem;
+aside p::first-letter {
+    font-family: Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    color: brown;
+    font-size: 1.5rem;
+
 }
 
-/* Título principal de cada página */
+/* TAMAÑO DE TEXTO DE ENLACES DEL NAVBAR */
+li a {
+    font-size: 1.2rem;
+}
+
+/* DIMENSIONES INICIALES DEL IFRAME */
+iframe {
+    width: 40rem;
+    height: 30rem;
+}
+
+/* PROPIEDADES DEL TEXTAREA */
+textarea {
+    width: 10rem;
+    height: 10rem;
+    resize: none;
+}
+
+div p {
+    text-align: justify;
+}
+
+/* COLOR DE FONDO DE LA NAVBAR */
+.header__bg {
+    background-color: #deb887;
+}
+
+/* ALINEAR A LA DERECHA EL MENÚ DEL NAVBAR */
+.navbar-nav {
+    margin-left: auto;
+}
+
+/* TÍTULO PRINCIPAL DE CADA PÁGINA */
 .main__title {
     font-family: rubik, sans-serif;
     text-align: center;
     color: brown;
 }
 
-/* Estilos de imagen de portada en página de inicio */
+/* PROPIEDADES DE IMAGEN DE PORTADA EN PÁGINA DE INICIO */
 .main__img {
     display: block;
     border-radius: 1rem;
-    padding: 1.5rem;
     margin: auto;
     padding: 0.5rem;
     background-image: url("../recursos/fondo1.jpg");
@@ -65,71 +94,43 @@ li a {
     height: 25rem;
 }
 
-.text-center {
+/* CENTRAR TEXTO */
+.text__center {
     text-align: center;
 }
 
-.text-justify {
-    text-align: justify;
-}
-
+/* PROPIEDADES DE CARD DE PÁGINA PRINCIPAL */
 .card {
     margin: 1rem auto;
     height: 20rem;
 }
 
+/* PROPIEDADES DE CARDS DE PRODUCTOS Y GALERÍA */
 .card2 {
     margin: 1rem auto;
     width: 35rem;
 }
 
-/* Revisar si se modifica o se borra */
-iframe {
-    width: 40rem;
-    height: 30rem;
-}
-
-/* Propiedades de boton__cotizar de página de productos */
-.boton__cotizar {
-    padding: 1rem;
-    border: 1px solid chocolate;
-    background-color: chocolate;
-    border-radius: 1rem;
-    color: white;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-/* Transformación de botón de productos al pasar el mouse sobre botón */
-.boton__cotizar:hover {
+/* TRANSFORMACIÓN DE BOTÓN ENVIAR DE PÁGINA DE CONTACTO */
+.boton__enviar:hover {
     transform: scale(1.2);
     color: brown;
 }
 
+/* TITULO DE TARJETAS */
 .tarjeta__titulo {
     color: brown;
     font-family: rubik, sans-serif;
 }
 
-/* Tamaño imagenes: misión, visión y politica */
+/* TAMAÑO IMAGENES DE MISION, VISION Y POLITICA */
 .tarjeta__img {
     display: block;
     margin: auto auto 1rem auto;
     width: 4rem;
 }
 
-.msj__final {
-    display: flex;
-    flex-direction: column;
-    grid-area: msj;
-    padding: 1rem;
-    width: 35rem;
-    text-align: justify;
-    justify-self: center;
-    color: chocolate;
-}
-
+/* PROPIEDADES DE IMAGEN DE FONDO DE MSJ DE PÁGINA PRINCIPAL */
 .imagen__fondo {
     display: flex;
     background-image: radial-gradient(rgba(142, 157, 162, 0.401), rgba(0, 0, 139, 0.221)), url("../recursos/msj.png");
@@ -143,20 +144,14 @@ iframe {
     border-radius: 1rem;
 }
 
-textarea {
-    width: 10rem;
-    height: 10rem;
-    resize: none;
-}
-
-/* Color del footer */
+/* COLOR DE FONDO DEL FOOTER */
 footer {
     display: block;
     background-color: burlywood;
     height: 7rem;
 }
 
-/* Propiedades del footer */
+/* PROPIEDADES DE REDES DEL FOOTER */
 .footer__redes {
     display: flex;
     justify-content: center;
@@ -164,7 +159,7 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-/* Propiedades de imagenes del footer */
+/* IMAGENES DEL FOOTER */
 .footer__imgs {
     display: block;
     justify-content: flex-end;
@@ -172,13 +167,13 @@ footer {
     margin: 0.5rem 0.5rem;
 }
 
-/* Propiedades del disclaimer del footer */
+/* PROPIEDADES DEL DISCLAIMER DEL FOOTER */
 .footer__disclaimer {
     display: flex;
     justify-content: center;
 }
 
-/* Animación del botón de página productos */
+/* ANIMACIÓN DE BOTÓN DE MISIÓN EN PÁGINA PRINCIPAL */
 .boton__animacion {
     animation-duration: 2s;
     animation-name: animacion_boton;
@@ -187,30 +182,23 @@ footer {
 
 @keyframes animacion_boton {
     0% {
-        width: 150px;
+        width: 8rem;
     }
 
     50% {
-        width: 200px;
+        width: 10rem;
     }
 
     100% {
-        width: 250px;
+        width: 12rem;
     }
-}
-
-div p {
-    text-align: justify;
 }
 
 .nosotros__historia {
     padding: 1.5rem;
 }
 
-
-
-/*Para visualización en tablet*/
-/* MEDIANO */
+/*PANTALLA MEDIANA*/
 @media (min-width: 768px) and (max-width: 991px) {
     aside {
     margin-top: 3rem;
@@ -228,7 +216,7 @@ div p {
     }
 }
 
-/*Para visualización en celular*/
+/*PANTALLA PEQUEÑA*/
 @media (min-width: 576px) and (max-width: 767px) {
     aside {
         margin: 0.5rem auto;
@@ -254,7 +242,7 @@ div p {
     }
 }
 
-/* Pantalla extra pequeña */
+/* PANTALLA EXTRA PEQUEÑA */
 @media (max-width: 575px) {
     .main__img {
         height: 15rem;
