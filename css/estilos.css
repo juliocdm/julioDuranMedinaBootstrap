@@ -1,89 +1,135 @@
-/* LETRA DE GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@charset "UTF-8";
+/* PROPIEDADES DEL ASIDE DE PROMOCIÓN */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aquamarine;
+  padding: 1rem;
+  margin-top: 3.5rem;
+  /* PANTALLA MEDIANA */
+  /* PANTALLA PEQUEÑA */
+  /* PANTALLA EXTRA PEQUEÑA */
+  /* ESPACIO BAJO TITULO DE ASIDE DE PROMOCIONES */
+  /* JUSTIFICAR EL PÁRRAFO DE ASIDE DE PROMOCIONES */ }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    aside {
+      margin-top: 3rem; } }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    aside {
+      margin: 0.5rem auto; } }
+  @media screen and (max-width: 575px) {
+    aside {
+      margin-top: 0.5rem; } }
+  aside h3 {
+    padding-bottom: 1rem; }
+  aside p {
+    text-align: justify;
+    /* CAMBIO DE PRIMERA LETRA DE PARRAFOS DE ASIDE */ }
+    aside p::first-letter {
+      font-family: Helvetica, Arial, sans-serif;
+      font-style: italic;
+      font-weight: bolder;
+      color: brown;
+      font-size: 1.5rem; }
 
+.boton {
+  /* TRANSFORMACIÓN DE BOTÓN ENVIAR DE PÁGINA DE CONTACTO */
+  /* ANIMACIÓN DE BOTÓN DE MISIÓN EN PÁGINA PRINCIPAL */ }
+  .boton__enviar:hover {
+    transform: scale(1.2);
+    color: brown; }
+  .boton__animacion {
+    animation-duration: 2s;
+    animation-name: animacion_boton;
+    animation-iteration-count: infinite; }
+
+@keyframes animacion_boton {
+  0% {
+    width: 8rem; }
+  50% {
+    width: 10rem; }
+  100% {
+    width: 12rem; } }
+
+/* PROPIEDADES DE REDES DEL FOOTER */
+footer {
+  display: block;
+  background-color: burlywood;
+  height: 7rem; }
+
+.footer {
+  /* IMAGENES DEL FOOTER */
+  /* PROPIEDADES DEL DISCLAIMER DEL FOOTER */ }
+  .footer__redes {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem; }
+  .footer__imgs {
+    display: block;
+    justify-content: flex-end;
+    width: 3rem;
+    margin: 0.5rem 0.5rem; }
+  .footer__disclaimer {
+    display: flex;
+    justify-content: center; }
+
+/* LETRA DE GOOGLE FONTS */
 /* PROPIEDADES INICIALES DE TODAS LAS PÁGINAS */
 * {
-    margin: 0;
-    padding: 0;
-    
-}
+  margin: 0;
+  padding: 0; }
 
 /* PROPIEDADES PARA EL HTML */
 html {
-    font-size: 16px;
-    background-color: #faebd7;
-}
-
-/* PROPIEDADES DEL ASIDE DE PROMOCIÓN */
-aside {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: aquamarine;
-    padding: 1rem;
-    margin-top: 3.5rem;
-}
-
-/* ESPACIO BAJO TITULO DE ASIDE DE PROMOCIONES */
-aside h3 {
-    padding-bottom: 1rem;
-}
-
-/* JUSTIFICAR EL PÁRRAFO DE ASIDE DE PROMOCIONES */
-aside p {
-    text-align: justify;
-}
-
-aside p::first-letter {
-    font-family: Helvetica, Arial, sans-serif;
-    font-style: italic;
-    font-weight: bolder;
-    color: brown;
-    font-size: 1.5rem;
-
-}
+  font-size: 16px; }
 
 /* TAMAÑO DE TEXTO DE ENLACES DEL NAVBAR */
 li a {
-    font-size: 1.2rem;
-}
+  font-size: 1.2rem; }
 
 /* DIMENSIONES INICIALES DEL IFRAME */
 iframe {
-    width: 40rem;
-    height: 30rem;
-}
+  width: 40rem;
+  height: 30rem;
+  /* PANTALLA MEDIANA Y PEQUEÑA */
+  /* PANTALLA EXTRA PEQUEÑA */ }
+  @media screen and (min-width: 576px) and (max-width: 991px) {
+    iframe {
+      width: 32rem;
+      height: 25rem; } }
+  @media screen and (max-width: 575px) {
+    iframe {
+      width: 95vw;
+      height: 15rem; } }
 
 /* PROPIEDADES DEL TEXTAREA */
 textarea {
-    width: 10rem;
-    height: 10rem;
-    resize: none;
-}
+  width: 10rem;
+  height: 10rem;
+  resize: none; }
 
 div p {
-    text-align: justify;
-}
+  text-align: justify; }
 
 /* COLOR DE FONDO DE LA NAVBAR */
 .header__bg {
-    background-color: #deb887;
-}
+  background-color: #deb887; }
 
 /* ALINEAR A LA DERECHA EL MENÚ DEL NAVBAR */
 .navbar-nav {
-    margin-left: auto;
-}
+  margin-left: auto; }
 
-/* TÍTULO PRINCIPAL DE CADA PÁGINA */
-.main__title {
+.main {
+  /* TÍTULO PRINCIPAL DE CADA PÁGINA */
+  /* PROPIEDADES DE IMAGEN DE PORTADA EN PÁGINA DE INICIO */ }
+  .main__title {
     font-family: rubik, sans-serif;
     text-align: center;
-    color: brown;
-}
-
-/* PROPIEDADES DE IMAGEN DE PORTADA EN PÁGINA DE INICIO */
-.main__img {
+    color: brown; }
+  .main__img {
     display: block;
     border-radius: 1rem;
     margin: auto;
@@ -92,182 +138,68 @@ div p {
     background-size: cover;
     background-repeat: no-repeat;
     height: 25rem;
-}
+    /* PANTALLA EXTRA PEQUEÑA */ }
+    @media screen and (max-width: 575px) {
+      .main__img {
+        height: 15rem; } }
 
 /* CENTRAR TEXTO */
 .text__center {
-    text-align: center;
-}
+  text-align: center; }
 
 /* PROPIEDADES DE CARD DE PÁGINA PRINCIPAL */
 .card {
-    margin: 1rem auto;
-    height: 20rem;
-}
-
-/* PROPIEDADES DE CARDS DE PRODUCTOS Y GALERÍA */
-.card2 {
-    margin: 1rem auto;
+  margin: 1rem auto;
+  height: 20rem;
+  /* PANTALLA PEQUEÑA */
+  /* PANTALLA EXTRA PEQUEÑA */
+  /* PROPIEDADES DE CARDS DE PRODUCTOS Y GALERÍA */ }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    .card {
+      width: 32rem;
+      align-self: center;
+      margin: 0.5rem auto; } }
+  @media screen and (max-width: 575px) {
+    .card {
+      margin: 0.5rem 0.5rem; } }
+  .card2 {
+    align-self: center;
     width: 35rem;
-}
+    margin: 1rem auto;
+    /* PANTALLA MEDIANA, PEQUEÑA Y EXTRA PEQUEÑA */ }
+    @media screen and (max-width: 991px) {
+      .card2 {
+        width: 33rem;
+        margin: 0.5rem auto; } }
 
-/* TRANSFORMACIÓN DE BOTÓN ENVIAR DE PÁGINA DE CONTACTO */
-.boton__enviar:hover {
-    transform: scale(1.2);
+.tarjeta {
+  /* TITULO DE TARJETAS */
+  /* TAMAÑO IMAGENES DE MISION, VISION Y POLITICA */ }
+  .tarjeta__titulo {
     color: brown;
-}
-
-/* TITULO DE TARJETAS */
-.tarjeta__titulo {
-    color: brown;
-    font-family: rubik, sans-serif;
-}
-
-/* TAMAÑO IMAGENES DE MISION, VISION Y POLITICA */
-.tarjeta__img {
+    font-family: rubik, sans-serif; }
+  .tarjeta__img {
     display: block;
     margin: auto auto 1rem auto;
-    width: 4rem;
-}
+    width: 4rem; }
 
 /* PROPIEDADES DE IMAGEN DE FONDO DE MSJ DE PÁGINA PRINCIPAL */
 .imagen__fondo {
-    display: flex;
-    background-image: radial-gradient(rgba(142, 157, 162, 0.401), rgba(0, 0, 139, 0.221)), url("../recursos/msj.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 1px solid chocolate;
-    width: 18rem;
-    height: 16rem;
-    margin: auto;
-    align-content: center;
-    border-radius: 1rem;
-}
-
-/* COLOR DE FONDO DEL FOOTER */
-footer {
-    display: block;
-    background-color: burlywood;
-    height: 7rem;
-}
-
-/* PROPIEDADES DE REDES DEL FOOTER */
-.footer__redes {
-    display: flex;
-    justify-content: center;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-/* IMAGENES DEL FOOTER */
-.footer__imgs {
-    display: block;
-    justify-content: flex-end;
-    width: 3rem;
-    margin: 0.5rem 0.5rem;
-}
-
-/* PROPIEDADES DEL DISCLAIMER DEL FOOTER */
-.footer__disclaimer {
-    display: flex;
-    justify-content: center;
-}
-
-/* ANIMACIÓN DE BOTÓN DE MISIÓN EN PÁGINA PRINCIPAL */
-.boton__animacion {
-    animation-duration: 2s;
-    animation-name: animacion_boton;
-    animation-iteration-count: infinite;
-}
-
-@keyframes animacion_boton {
-    0% {
-        width: 8rem;
-    }
-
-    50% {
-        width: 10rem;
-    }
-
-    100% {
-        width: 12rem;
-    }
-}
+  display: flex;
+  background-image: radial-gradient(rgba(142, 157, 162, 0.401), rgba(0, 0, 139, 0.221)), url("../recursos/msj.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid chocolate;
+  width: 18rem;
+  height: 16rem;
+  margin: auto;
+  align-content: center;
+  border-radius: 1rem; }
 
 .nosotros__historia {
-    padding: 1.5rem;
-}
-
-/*PANTALLA MEDIANA*/
-@media (min-width: 768px) and (max-width: 991px) {
-    aside {
-    margin-top: 3rem;
-    }
-
-    iframe {
-        width: 30rem;
-        height: 25rem;
-    }
-
-    div .card2 {
-        width: 33rem;
-        align-self: center;
-        margin: 0.5rem auto;
-    }
-}
-
-/*PANTALLA PEQUEÑA*/
-@media (min-width: 576px) and (max-width: 767px) {
-    aside {
-        margin: 0.5rem auto;
-        }
-
-    div .card {
-        width: 32rem;
-        height: 20rem;
-        align-self: center;
-        margin: 0.5rem auto;
-    }
-
-    div .card2 {
-        width: 33rem;
-        /* height: 27rem; */
-        align-self: center;
-        margin: 0.5rem auto;
-    }
-
-    iframe {
-        width: 32rem;
-        height: 25rem;
-    }
-}
+  padding: 1.5rem; }
 
 /* PANTALLA EXTRA PEQUEÑA */
 @media (max-width: 575px) {
-    .main__img {
-        height: 15rem;
-    }
-
-    aside {
-        margin-top: 0.5rem;
-        }
-
-    iframe {
-        width: 95vw;
-        height: 15rem;
-    }
-
-    div .card {
-        margin: 0.5rem 0.5rem;
-        height: 20rem;
-    }
-
-    div .card2 {
-        /* height: 30rem; */
-        margin: 0.5rem auto;
-    }
-
-    .img__productos {
-        width: 90vw;
-    }
-}
+  .img__productos {
+    width: 90vw; } }

@@ -1,0 +1,29 @@
+/* PROPIEDADES DE REDES DEL FOOTER */
+footer {
+    display: block;
+    background-color: $bg__color__footer;
+    height: 7rem;
+}
+
+.footer {
+    &__redes{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    }
+    
+    /* IMAGENES DEL FOOTER */
+    &__imgs {
+        display: block;
+        justify-content: flex-end;
+        width: 3rem;
+        margin: 0.5rem 0.5rem;
+    }
+
+    /* PROPIEDADES DEL DISCLAIMER DEL FOOTER */
+    &__disclaimer {
+        display: flex;
+        justify-content: center;
+    }
+}

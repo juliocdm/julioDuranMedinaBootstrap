@@ -1,0 +1,28 @@
+.boton {
+    /* TRANSFORMACIÓN DE BOTÓN ENVIAR DE PÁGINA DE CONTACTO */
+    &__enviar:hover {
+    transform: scale(1.2);
+    color: $color_titulo;
+    }
+    
+    /* ANIMACIÓN DE BOTÓN DE MISIÓN EN PÁGINA PRINCIPAL */
+    &__animacion {
+        animation-duration: 2s;
+        animation-name: animacion_boton;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes animacion_boton {
+    0% {
+        width: 8rem;
+    }
+
+    50% {
+        width: 10rem;
+    }
+
+    100% {
+        width: 12rem;
+    }
+}

@@ -1,0 +1,39 @@
+/* PROPIEDADES DEL ASIDE DE PROMOCIÓN */
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $bgc__aside;
+    padding: 1rem;
+    margin-top: 3.5rem;
+    /* PANTALLA MEDIANA */
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        margin-top: 3rem;
+    }
+    /* PANTALLA PEQUEÑA */
+    @media screen and (min-width: 576px) and (max-width: 767px) {
+        margin: 0.5rem auto;
+    }
+    /* PANTALLA EXTRA PEQUEÑA */
+    @media screen and (max-width: 575px) {
+        margin-top: 0.5rem;
+    }
+    
+    /* ESPACIO BAJO TITULO DE ASIDE DE PROMOCIONES */
+    h3 {
+        padding-bottom: 1rem;
+    }
+
+    /* JUSTIFICAR EL PÁRRAFO DE ASIDE DE PROMOCIONES */
+    p {
+        text-align: justify;
+        /* CAMBIO DE PRIMERA LETRA DE PARRAFOS DE ASIDE */
+        &::first-letter {
+            font-family: Helvetica, Arial, sans-serif;
+            font-style: italic;
+            font-weight: bolder;
+            color: $color_titulo;
+            font-size: 1.5rem;
+        }
+    }
+}

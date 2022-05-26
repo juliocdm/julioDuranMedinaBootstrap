@@ -1,0 +1,159 @@
+@import 'variables';
+@import 'aside';
+@import 'botones';
+@import 'footer';
+
+/* LETRA DE GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+/* PROPIEDADES INICIALES DE TODAS LAS PÁGINAS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* PROPIEDADES PARA EL HTML */
+html {
+    font-size: $fs__html;
+}
+
+/* TAMAÑO DE TEXTO DE ENLACES DEL NAVBAR */
+li a {
+    font-size: $fs__enlaces__navbar;
+}
+
+/* DIMENSIONES INICIALES DEL IFRAME */
+iframe {
+    width: 40rem;
+    height: 30rem;
+    /* PANTALLA MEDIANA Y PEQUEÑA */
+    @media screen and (min-width: 576px) and (max-width: 991px) {
+        width: 32rem;
+        height: 25rem;
+    }
+    /* PANTALLA EXTRA PEQUEÑA */
+    @media screen and (max-width: 575px) {
+        width: 95vw;
+        height: 15rem;
+    }
+}
+
+/* PROPIEDADES DEL TEXTAREA */
+textarea {
+    width: 10rem;
+    height: 10rem;
+    resize: none;
+
+}
+
+div p {
+    text-align: justify;
+}
+
+/* COLOR DE FONDO DE LA NAVBAR */
+.header__bg {
+    background-color: $bgc__header;
+}
+
+/* ALINEAR A LA DERECHA EL MENÚ DEL NAVBAR */
+.navbar-nav {
+    margin-left: auto;
+}
+
+.main {
+    /* TÍTULO PRINCIPAL DE CADA PÁGINA */
+    &__title {
+    font-family: $ff__titulo;
+    text-align: center;
+    color: $color_titulo;
+    }
+
+    /* PROPIEDADES DE IMAGEN DE PORTADA EN PÁGINA DE INICIO */
+    &__img {
+    display: block;
+    border-radius: 1rem;
+    margin: auto;
+    padding: 0.5rem;
+    background-image: url("../recursos/fondo1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25rem;
+    /* PANTALLA EXTRA PEQUEÑA */
+    @media screen and (max-width: 575px) {
+        height: 15rem;
+        }
+    }
+}
+
+/* CENTRAR TEXTO */
+.text__center {
+    text-align: center;
+}
+
+/* PROPIEDADES DE CARD DE PÁGINA PRINCIPAL */
+.card {
+    margin: 1rem auto;
+    height: 20rem;
+    /* PANTALLA PEQUEÑA */
+    @media screen and (min-width: 576px) and (max-width: 767px) {
+        width: 32rem;
+        align-self: center;
+        margin: 0.5rem auto;
+    }
+    /* PANTALLA EXTRA PEQUEÑA */
+    @media screen and (max-width: 575px) {
+        margin: 0.5rem 0.5rem;
+    }
+
+    /* PROPIEDADES DE CARDS DE PRODUCTOS Y GALERÍA */
+    &2 {
+        align-self: center;        
+        width: 35rem;
+        margin: 1rem auto;
+        /* PANTALLA MEDIANA, PEQUEÑA Y EXTRA PEQUEÑA */
+        @media screen and (max-width: 991px) {
+            width: 33rem;
+            margin: 0.5rem auto;
+        }
+    }
+}
+
+.tarjeta {
+    /* TITULO DE TARJETAS */
+    &__titulo {
+    color: $color_titulo;
+    font-family: $ff__titulo;
+    }
+
+    /* TAMAÑO IMAGENES DE MISION, VISION Y POLITICA */
+    &__img {
+        display: block;
+        margin: auto auto 1rem auto;
+        width: 4rem;
+    }
+}
+
+/* PROPIEDADES DE IMAGEN DE FONDO DE MSJ DE PÁGINA PRINCIPAL */
+.imagen__fondo {
+    display: flex;
+    background-image: radial-gradient(rgba(142, 157, 162, 0.401), rgba(0, 0, 139, 0.221)), url("../recursos/msj.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid chocolate;
+    width: 18rem;
+    height: 16rem;
+    margin: auto;
+    align-content: center;
+    border-radius: 1rem;
+}
+
+.nosotros__historia {
+    padding: 1.5rem;
+}
+
+/* PANTALLA EXTRA PEQUEÑA */
+@media (max-width: 575px) {
+    .img__productos {
+        width: 90vw;
+    }
+}
