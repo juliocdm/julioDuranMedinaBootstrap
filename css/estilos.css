@@ -5,17 +5,24 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: aquamarine;
+  background-color: bisque;
   padding: 1rem;
   margin-top: 3.5rem;
+  height: 88%;
+  /* PANTALLA GRANDE*/
   /* PANTALLA MEDIANA */
   /* PANTALLA PEQUEÑA */
   /* PANTALLA EXTRA PEQUEÑA */
   /* ESPACIO BAJO TITULO DE ASIDE DE PROMOCIONES */
   /* JUSTIFICAR EL PÁRRAFO DE ASIDE DE PROMOCIONES */ }
+  @media screen and (min-width: 992px) {
+    aside {
+      margin-top: 3.6rem;
+      height: 88%; } }
   @media screen and (min-width: 768px) and (max-width: 991px) {
     aside {
-      margin-top: 3rem; } }
+      margin-top: 3rem;
+      height: 90%; } }
   @media screen and (min-width: 576px) and (max-width: 767px) {
     aside {
       margin: 0.5rem auto; } }
@@ -34,24 +41,31 @@ aside {
       color: brown;
       font-size: 1.5rem; }
 
+.boton__bootstrap, .boton__enviar:hover, .btn-primary {
+  background-color: chocolate;
+  border-color: chocolate; }
+
 .boton {
   /* TRANSFORMACIÓN DE BOTÓN ENVIAR DE PÁGINA DE CONTACTO */
   /* ANIMACIÓN DE BOTÓN DE MISIÓN EN PÁGINA PRINCIPAL */ }
   .boton__enviar:hover {
-    transform: scale(1.2);
-    color: brown; }
+    transform: scale(1.1);
+    /* USO DE EXTEND EN CLASES DIFERENTES */ }
   .boton__animacion {
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-name: animacion_boton;
     animation-iteration-count: infinite; }
+
+.btn-primary {
+  /* USO DE EXTEND EN CLASES DIFERENTES */ }
 
 @keyframes animacion_boton {
   0% {
     width: 8rem; }
   50% {
-    width: 10rem; }
+    width: 9rem; }
   100% {
-    width: 12rem; } }
+    width: 10rem; } }
 
 /* PROPIEDADES DE REDES DEL FOOTER */
 footer {
@@ -94,9 +108,14 @@ li a {
 iframe {
   width: 40rem;
   height: 30rem;
-  /* PANTALLA MEDIANA Y PEQUEÑA */
+  /* PANTALLA MEDIANA */
+  /* PANTALLA PEQUEÑA */
   /* PANTALLA EXTRA PEQUEÑA */ }
-  @media screen and (min-width: 576px) and (max-width: 991px) {
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    iframe {
+      width: 29rem;
+      height: 25rem; } }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
     iframe {
       width: 32rem;
       height: 25rem; } }
@@ -147,17 +166,18 @@ div p {
 .text__center {
   text-align: center; }
 
+/* USO DE MIXIN */
 /* PROPIEDADES DE CARD DE PÁGINA PRINCIPAL */
 .card {
-  margin: 1rem auto;
+  align-self: center;
   height: 20rem;
+  margin: 1rem auto;
   /* PANTALLA PEQUEÑA */
   /* PANTALLA EXTRA PEQUEÑA */
   /* PROPIEDADES DE CARDS DE PRODUCTOS Y GALERÍA */ }
   @media screen and (min-width: 576px) and (max-width: 767px) {
     .card {
       width: 32rem;
-      align-self: center;
       margin: 0.5rem auto; } }
   @media screen and (max-width: 575px) {
     .card {
@@ -203,3 +223,16 @@ div p {
 @media (max-width: 575px) {
   .img__productos {
     width: 90vw; } }
+
+/* USO DE @each */
+h1 {
+  font-size: 2.2rem; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.5rem; }
+
+h5 {
+  font-size: 1rem; }

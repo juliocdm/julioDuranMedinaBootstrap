@@ -5,14 +5,17 @@ footer {
     height: 7rem;
 }
 
-.footer {
-    &__redes{
+@mixin footer__common {
     display: flex;
     justify-content: center;
+}
+
+.footer {
+    &__redes{
+    @include footer__common();
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    }
-    
+    }   
     /* IMAGENES DEL FOOTER */
     &__imgs {
         display: block;
@@ -20,10 +23,8 @@ footer {
         width: 3rem;
         margin: 0.5rem 0.5rem;
     }
-
     /* PROPIEDADES DEL DISCLAIMER DEL FOOTER */
     &__disclaimer {
-        display: flex;
-        justify-content: center;
+        @include footer__common();
     }
 }

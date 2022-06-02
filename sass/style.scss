@@ -26,8 +26,13 @@ li a {
 iframe {
     width: 40rem;
     height: 30rem;
-    /* PANTALLA MEDIANA Y PEQUEÑA */
-    @media screen and (min-width: 576px) and (max-width: 991px) {
+    /* PANTALLA MEDIANA */
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        width: 29rem;
+        height: 25rem;
+    }
+    /* PANTALLA PEQUEÑA */
+    @media screen and (min-width: 576px) and (max-width: 767px) {
         width: 32rem;
         height: 25rem;
     }
@@ -43,7 +48,6 @@ textarea {
     width: 10rem;
     height: 10rem;
     resize: none;
-
 }
 
 div p {
@@ -90,21 +94,25 @@ div p {
     text-align: center;
 }
 
+/* USO DE MIXIN */
+@mixin card__common {
+    align-self: center;
+    height: 20rem;
+    margin: 1rem auto;
+}
+
 /* PROPIEDADES DE CARD DE PÁGINA PRINCIPAL */
 .card {
-    margin: 1rem auto;
-    height: 20rem;
+    @include card__common();
     /* PANTALLA PEQUEÑA */
     @media screen and (min-width: 576px) and (max-width: 767px) {
         width: 32rem;
-        align-self: center;
         margin: 0.5rem auto;
     }
     /* PANTALLA EXTRA PEQUEÑA */
     @media screen and (max-width: 575px) {
         margin: 0.5rem 0.5rem;
     }
-
     /* PROPIEDADES DE CARDS DE PRODUCTOS Y GALERÍA */
     &2 {
         align-self: center;        
@@ -156,4 +164,12 @@ div p {
     .img__productos {
         width: 90vw;
     }
+}
+
+/* USO DE @each */
+$headers: (h1: 2.2rem, h2: 2rem, h3: 1.5rem, h5: 1rem);
+@each $key, $value in $headers {
+    #{$key} {
+        font-size: $value;
+    }    
 }

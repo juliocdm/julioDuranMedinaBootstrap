@@ -1,16 +1,26 @@
+.boton__bootstrap {
+    background-color: chocolate;
+    border-color: chocolate;
+}
+
 .boton {
     /* TRANSFORMACIÓN DE BOTÓN ENVIAR DE PÁGINA DE CONTACTO */
     &__enviar:hover {
-    transform: scale(1.2);
-    color: $color_titulo;
-    }
-    
+    transform: scale(1.1);
+    /* USO DE EXTEND EN CLASES DIFERENTES */
+    @extend .boton__bootstrap;
+    }    
     /* ANIMACIÓN DE BOTÓN DE MISIÓN EN PÁGINA PRINCIPAL */
     &__animacion {
-        animation-duration: 2s;
+        animation-duration: 1s;
         animation-name: animacion_boton;
         animation-iteration-count: infinite;
     }
+}
+
+.btn-primary {
+    /* USO DE EXTEND EN CLASES DIFERENTES */
+    @extend .boton__bootstrap;
 }
 
 @keyframes animacion_boton {
@@ -19,10 +29,10 @@
     }
 
     50% {
-        width: 10rem;
+        width: 9rem;
     }
 
     100% {
-        width: 12rem;
+        width: 10rem;
     }
 }
